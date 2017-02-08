@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <!-- A CardView that contains another views -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardUseCompatPadding="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:id="@+id/mainHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_product_thumbnail"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_ad_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Product Name"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp"
+                    android:layout_margin="4dp"
+                    android:textStyle="bold"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_no_of_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textSecondary"
+                    android:text="No of rating"
+                    android:textSize="16sp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_minOs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=">2016"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="16sp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_product_thumbnail"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:scaleType="centerCrop"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_launcher"
+                 />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
